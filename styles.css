@@ -5,13 +5,17 @@ body {
     padding: 20px;
 }
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     color: #b58900; /* Gold color for headings */
     border-bottom: 2px solid #cb4b16; /* Darker orange underline for emphasis */
 }
 
 button {
-    background-color: #cb4b16; /* Rusty red, reminiscent of archaeological sites */
+    background-color: #cb4b16; /* Rusty red */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -20,16 +24,23 @@ button {
     border-radius: 5px;
     margin-top: 10px;
     box-shadow: 2px 2px 4px #888888;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #dc322f; /* Slightly brighter red for hover effect */
+    background-color: #dc322f; /* Slightly brighter red */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:focus {
+    outline: 2px dashed #b58900; /* Gold outline for focus visibility */
+    outline-offset: 2px; /* Space between outline and button */
 }
 
 p {
-    background-color: #eee8d5; /* Light sand color for paragraph backgrounds */
+    background-color: #eee8d5; /* Light sand color for paragraphs */
     padding: 15px;
-    border-left: 5px solid #b58900; /* Gold color for a touch of adventure */
+    border-left: 5px solid #b58900; /* Gold for adventure touch */
 }
 
 /* Adding Indiana Jones themed emojis */
@@ -44,6 +55,15 @@ button:before {
 /* Styling for results to stand out */
 #room1Result, #room2Result, #room3Result {
     margin-top: 10px;
-    color: #2aa198; /* Calm teal for results, suggesting oasis or treasure */
+    color: #2aa198; /* Calm teal for results */
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    button {
+        width: 100%; /* Full-width buttons on small screens */
+    }
 }
