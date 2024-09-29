@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Corrected ID for attaching the event listener for Room 1
+    // Corrected ID for attaching the event listener for Room 1.
     document.getElementById("solveRoom1").addEventListener("click", () => {
         fetch('books.json') 
             .then(response => response.json())
             .then(books => {
                 const mostRecentBook = findMostRecentBook(books);
-                // Corrected element ID for displaying results
+                // Corrected element ID for displaying results.
                 document.getElementById("room1Result").textContent = `The key to the next room is: ${mostRecentBook.title}`;
             });
     });
