@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(books => {
                 const mostRecentBook = findMostRecentBook(books);
-                document.getElementById("resultRoom1").textContent = `The key to the next room is: ${mostRecentBook.title}`;
+                document.getElementById("resultRoom1").textContent = `The key to the next room is Eloquent JavaScript: ${mostRecentBook.title}`;
             });
     });
 
